@@ -1,7 +1,1 @@
-# Ignore everything in this directory
-*
-# Except these files
-!.gitignore
-!coredata.is.js
-!README.md
-!coredata-login-screenshots/*
+coredata.vagrant.local.js
