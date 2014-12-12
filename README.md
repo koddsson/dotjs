@@ -6,7 +6,7 @@ A collection of my .js files. See [defunkt/dotjs](https://github.com/defunkt/dot
 coredata.is.js
 --------------
 
-Changes the login page image to a random filkr one. See 
-[coredata-login-screenshots] for examples like these:
+Changes the login page image to a random flickr one. You can find example
+screenshots [here](coredata-login-screenshots).
 
 ![](coredata-login-screenshots/Screenshot00006.png)
