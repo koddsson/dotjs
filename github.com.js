@@ -26,3 +26,13 @@ if($('[name=comment_and_close]').length === 1) {
     })
   );
 }
+
+$.get('https://gist.githubusercontent.com/koddsson/0d4fc1735949e0822755/raw/2d095c5a304e71f5ae058926721aa9c2b1cf61ae/template.md', function(data) {
+  $('#pull_request_body').val(data);
+});
+
+$('body').on('DOMNodeInserted', '#pull_request_body', function (e) {
+  $.get('https://gist.githubusercontent.com/koddsson/0d4fc1735949e0822755/raw/2d095c5a304e71f5ae058926721aa9c2b1cf61ae/template.md', function(data) {
+    $(event.target).val(data);
+  });
+});
