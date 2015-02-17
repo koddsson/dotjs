@@ -7,11 +7,17 @@ var stringToColour = function(str) {
     return colour;
 };
 
+/*
+ * This code will replace all github avatars with a beautiful man.
+ */
 $('.timeline-comment-avatar, .avatar').each(function(_, avatar) {
   $(avatar).attr('src', 'http://tldr.is/holz.png')
            .css('background-color', stringToColour($(avatar).attr('alt')));
 });
 
+/*
+ *  This will add a LGTM button next to the comment button on PRs.
+ */
 if($('[name=comment_and_close]').length === 1) {
   $('[name=comment_and_close]').before($('<button />')
     .html('LGTM')
@@ -27,6 +33,9 @@ if($('[name=comment_and_close]').length === 1) {
   );
 }
 
+/*
+ *  This will add a PR template from a gist to a PR textbox.
+ */
 $.get('https://gist.githubusercontent.com/koddsson/0d4fc1735949e0822755/raw/2d095c5a304e71f5ae058926721aa9c2b1cf61ae/template.md', function(data) {
   $('#pull_request_body').val(data);
 });
